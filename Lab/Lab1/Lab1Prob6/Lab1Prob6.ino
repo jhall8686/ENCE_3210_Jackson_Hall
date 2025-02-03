@@ -4,6 +4,7 @@
 #define BUTTON 11
 
 void reset() {
+  //Reset all LEDS
   digitalWrite(RLED,LOW);
   digitalWrite(GLED,LOW);
   digitalWrite(BLED,LOW);
@@ -11,6 +12,7 @@ void reset() {
 
 }
 void setup() {
+  //Define pinModes
   pinMode(GLED, OUTPUT);
   pinMode(RLED, OUTPUT);
   pinMode(BLED, OUTPUT);
@@ -18,6 +20,7 @@ void setup() {
   
 }
 void loop() {
+  //Repeats pattern while button is pressed
   while(digitalRead(BUTTON)==HIGH) {
     digitalWrite(RLED,HIGH);
     reset();
