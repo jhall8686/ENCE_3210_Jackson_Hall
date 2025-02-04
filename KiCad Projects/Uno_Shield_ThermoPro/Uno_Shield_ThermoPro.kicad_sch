@@ -2371,16 +2371,16 @@
 		(uuid "0a0a72e4-4ed0-44a9-ab4e-567089e8a6c4")
 	)
 	(no_connect
+		(at 74.93 74.93)
+		(uuid "0e6df490-193c-44be-b97d-9c18828bdccb")
+	)
+	(no_connect
 		(at 74.93 31.75)
 		(uuid "186eff5c-bf68-4128-bf25-8df98ebeb623")
 	)
 	(no_connect
 		(at 19.05 34.29)
 		(uuid "19e32e68-254f-4b2d-b0e9-f9f655400e14")
-	)
-	(no_connect
-		(at 74.8942 74.93)
-		(uuid "2ad98414-2a64-4f37-8686-eac6698cc6f0")
 	)
 	(no_connect
 		(at 21.59 62.23)
@@ -2399,7 +2399,7 @@
 		(uuid "664a9921-62e3-4a59-ac46-a2cae86825fb")
 	)
 	(no_connect
-		(at 74.93 72.39)
+		(at 74.93 62.23)
 		(uuid "8af3be41-8078-4955-bb73-9bb2130d3b93")
 	)
 	(no_connect
@@ -2407,7 +2407,7 @@
 		(uuid "8d3d9e4b-003c-4e42-b355-fd6fab4c174f")
 	)
 	(no_connect
-		(at 74.93 36.83)
+		(at 74.93 49.53)
 		(uuid "a1e83219-a478-4b15-b396-df9d1b87610f")
 	)
 	(no_connect
@@ -2425,6 +2425,10 @@
 	(no_connect
 		(at 74.93 41.91)
 		(uuid "d4c8ee35-5fe4-410f-82d5-337c378ebce3")
+	)
+	(no_connect
+		(at 74.93 64.77)
+		(uuid "d762a8da-817f-4f31-84c0-4c8d79533c54")
 	)
 	(no_connect
 		(at 111.76 58.42)
@@ -2962,16 +2966,6 @@
 		)
 		(uuid "3f993800-48a9-4e85-b143-14bd7470f600")
 	)
-	(text "8"
-		(exclude_from_sim no)
-		(at 74.168 48.514 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "41d891e8-7e7d-40be-8aa2-5f00dd7da9dc")
-	)
 	(text "DS18B20\n(TEMP SENSOR)\n"
 		(exclude_from_sim no)
 		(at 197.866 68.072 0)
@@ -3041,16 +3035,6 @@
 			)
 		)
 		(uuid "ae7e0f12-fc47-4d64-894c-ed61f235c514")
-	)
-	(text "*6\n"
-		(exclude_from_sim no)
-		(at 72.898 61.468 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "bec9f57d-5afa-45a2-9ce0-4c5156e37f9d")
 	)
 	(text "* Indicates a PWM-capable pin"
 		(exclude_from_sim no)
@@ -3164,7 +3148,7 @@
 		(uuid "17664b02-5942-4822-90b8-02ea320b8781")
 	)
 	(label "BUTTON_ON{slash}OFF"
-		(at 74.93 69.85 0)
+		(at 74.93 67.31 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3183,8 +3167,8 @@
 		)
 		(uuid "1f21dc70-aefe-4018-918e-d933d542fcb7")
 	)
-	(label "2"
-		(at 74.93 72.39 180)
+	(label "*6"
+		(at 74.93 62.23 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3203,8 +3187,8 @@
 		)
 		(uuid "2c60ab74-0590-423b-8921-6f3212a358d2")
 	)
-	(label "13"
-		(at 74.93 36.83 180)
+	(label "8"
+		(at 74.93 49.53 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3214,7 +3198,7 @@
 		(uuid "35bc5b35-b7b2-44d5-bbed-557f428649b2")
 	)
 	(label "TEMP_DIGITAL"
-		(at 74.93 49.53 0)
+		(at 74.93 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3224,12 +3208,12 @@
 		(uuid "3be827ab-8eac-4a2e-8c77-775b4e00a848")
 	)
 	(label "*5"
-		(at 74.93 64.77 0)
+		(at 74.93 64.77 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "3ffaa3b1-1d78-4c7b-bdf9-f1a8019c92fd")
 	)
@@ -3314,7 +3298,7 @@
 		(uuid "a6bff0c7-f5c6-4c91-aa2a-ef91af5b967d")
 	)
 	(label "BUTTON_UNIT"
-		(at 74.93 62.23 0)
+		(at 74.93 72.39 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3434,7 +3418,7 @@
 		(uuid "ea5aa60b-a25e-41a1-9e06-c7b6f957567f")
 	)
 	(label "BUTTON_LIGHT"
-		(at 74.93 67.31 0)
+		(at 74.93 69.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
