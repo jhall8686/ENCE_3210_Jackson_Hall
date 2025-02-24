@@ -2986,6 +2986,16 @@
 		)
 		(uuid "4f1165d2-abad-4b91-8f3d-1d0c301c1bec")
 	)
+	(text "*2"
+		(exclude_from_sim no)
+		(at 73.152 71.374 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6010c32c-0926-406a-84f8-41d06cfc623e")
+	)
 	(text "*10\n"
 		(exclude_from_sim no)
 		(at 73.152 43.688 0)
@@ -3036,6 +3046,16 @@
 		)
 		(uuid "ae7e0f12-fc47-4d64-894c-ed61f235c514")
 	)
+	(text "13\n"
+		(exclude_from_sim no)
+		(at 73.406 35.814 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b3347711-e79e-4121-baa3-30261980bea9")
+	)
 	(text "* Indicates a PWM-capable pin"
 		(exclude_from_sim no)
 		(at 57.15 84.582 0)
@@ -3076,6 +3096,16 @@
 			)
 		)
 		(uuid "dd94b6d9-4a94-49c0-aa44-5fe05221044d")
+	)
+	(text "12"
+		(exclude_from_sim no)
+		(at 73.406 38.608 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "feeb5eae-f7a5-482c-9811-b5aa38f59da7")
 	)
 	(label "RX{slash}0"
 		(at 74.93 77.47 180)
