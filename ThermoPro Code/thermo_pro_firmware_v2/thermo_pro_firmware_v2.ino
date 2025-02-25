@@ -179,7 +179,7 @@ void loop() {
     {
       case IDLE_STATE:
         //check buttons
-        checkButtons(); 
+        checkButtons();
         //read and display temperature
         readTemperature();
         displayTemperature();
@@ -258,20 +258,14 @@ void displayTemperature() {
 
   //Print temperature
   display.setCursor(0,8);
-  if(!gUnits) display.print(DallasTemperature::toFahrenheit(tempC));
-  else display.print(tempC);
-  
+  (gUnits) ? display.print(tempC) : display.print(DallasTemperature::toFahrenheit(tempC));
+
   //Print units
-  if(!gUnits) display.drawBitmap(0,0,images[3],128,32,WHITE);
-  else display.drawBitmap(0,0,images[2],128,32,WHITE);
+  (gUnits) ? display.drawBitmap(0,0,images[2],128,32,WHITE) : display.drawBitmap(0,0,images[3],128,32,WHITE);
 
   //Print locked/unlocked
+  (gLockFlag) ? display.drawBitmap(0,0,images[0],128,32,WHITE) : display.drawBitmap(0,0,images[1],128,32,WHITE);
 
-  if(gLockFlag) {
-    display.drawBitmap(0,0,images[0],128,32,WHITE);
-  } else {
-    display.drawBitmap(0,0,images[1],128,32,WHITE);
-  }
 
   display.display();
 }
