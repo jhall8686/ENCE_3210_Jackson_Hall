@@ -313,7 +313,7 @@ void checkButtons() {
 ISR(INT0_vect) {
   gPowerOnFlag = !gPowerOnFlag;
 };
-//Lock button (Stops/starts TIMER2 (temperature measurement))
+//Lock button (Stops/starts TIMER2 which measures temperature)
 ISR(INT1_vect) {
   //Flips locked state
   gLockFlag = !gLockFlag;
