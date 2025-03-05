@@ -127,7 +127,7 @@ void setup() {
   //CTC Mode (Compare to OCR1A)
   TCCR1B |= (1 << WGM12);
 
-  //Reset Count ##ATTEMPT TO FIX STARTUP ISSUE
+  //Reset Count
   TCNT1 = 0;
 
   //Prescales by 1024 (now runs at 16M/1024 = 15,625 Hz)
@@ -192,8 +192,7 @@ void loop() {
           SM_State = IDLE_STATE;
           resetTimer1();
         }
-        //display temperature (temp read in this state slows down program ##NEEDS FIX? SEEMS MINOR METHINKS WE DONT NEED TO READ WHILE IN THIS STATE)
-        //readTemperature();
+        //Display temperature
         displayTemperature();
         //When you remain in this state for 3 seconds, reset the timer go to UNITS_CHANGE_STATE
         if(g3sCounter)
@@ -302,7 +301,7 @@ void checkButtons() {
     delay(50);
     gLightOn = !gLightOn;
   }
-  //##TODO Calibration button
+  //Calibration button not included in the code
 }
 
 /***************************************
