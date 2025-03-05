@@ -31,11 +31,10 @@ void setup() {
   //Also automatically uses pin A0 as Vin
   ADMUX = 0;
   ADCSRA = 0;
-  ADCSRA |= (1 << ADEN); //Enable ADC
-  //ADCSRA |= (1 << ADSC); to start the conversion; 
-    //Triggers on Timer 2 Compare Interrupt
+  ADCSRB = 0;
   
-  ADCSRA |= (1 << ADIE); // Enable ADC interrupt
+  ADCSRA |= (1 << ADEN) | (1 << ADATE) | (1 << ADIE); //Enable ADC, Enable Auto Trigger, Enable ADC interrupt
+  ADCSRB |= (1 << ADTS2) | (1 << ADTS0); //Set Auto trigger to Timer 1 = OCR1B
 
   //TIMERS
   //Timer 1 -- 20 Hz Interrupt Trigger
@@ -43,8 +42,9 @@ void setup() {
   TCCR1B = 0;
   
   OCR1A = COMPARE_20HZ;
+  OCR1B = COMPARE_20HZ;
   TCCR1B |= (1 << WGM12); //CTC Mode
-  //TCCR1B |= (1 << CS12); // Prescale by 256
+  //TCCR1B |= (1 << CS12); // Prescale by 256 -- turned on when On/Off button is pressed
   
   //Timer 2 -- Fast PWM Generator at 250 Hz
   TCCR2A = 0;
@@ -80,6 +80,7 @@ void loop() {
 
     //handles full array flag and computes the average, while resetting the array (should happen every 5 seconds)
     if(gFullArrayFlag) {
+      stopTimer1();
       uint16_t sum = 0;
       for(int i = 0; i < 100; i++) {
         sum += digitalTemp[i];
@@ -105,7 +106,7 @@ void loop() {
       //resets flags so ADC can start sampling and storing again
       sampleCount = 0;
       gFullArrayFlag = 0;
-      
+      startTimer1();
     }
   }
 }
@@ -128,9 +129,7 @@ ISR(INT1_vect) {
   if(gSenseFlag > 2) gSenseFlag = 0;
 }
 
-ISR(TIMER1_COMPA_vect) {
-  ADCSRA |= (1 << ADSC);  
-}
+EMPTY_INTERRUPT(TIMER1_COMPA_vect);
 
 
 ISR(ADC_vect) {
