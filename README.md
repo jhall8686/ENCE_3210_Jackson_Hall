@@ -3,4 +3,6 @@ Microprocessor Systems Project Submissions
 
 ---
 
+<img src = "img/ThermoPro_Shield.png"/>
+
 The primary project in this repository is the **ThermoPro Thermometer Probe**, a clone of an actual product implemented on a PCB shield. All of the PCB docs and firmware can be found here.
